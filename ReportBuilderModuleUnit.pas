@@ -167,12 +167,12 @@ procedure TReportBuilderModule.AddPeriodData(vActionWhere, vEventWhere: string;
   vRowIndex: Integer; ABegDate, AEndDate: TDateTime; AKolColumn, ASummaColumn:
   Integer);
 begin
-  if vActionWhere <> '' then
+  if vActionWhere.Trim() <> '' then
     AddPeriodSectionData(qryAty, vRowIndex, ABegDate, AEndDate, AKolColumn,
       ASummaColumn, vActionWhere);
 
-  if vEventWhere <> '' then
-    AddPeriodSectionData(qryAty, vRowIndex, ABegDate, AEndDate, AKolColumn,
+  if vEventWhere.Trim() <> '' then
+    AddPeriodSectionData(qryEty, vRowIndex, ABegDate, AEndDate, AKolColumn,
       ASummaColumn, vEventWhere);
 end;
 
